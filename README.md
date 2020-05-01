@@ -1,2 +1,2 @@
-# angularjs
-angular js tutorials
+# Javascript
+javascript practices
