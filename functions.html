@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+  </head>
+  <body>
+<p>What are Functions?
+
+When first learning how to calculate the area of a rectangle, there’s a sequence of steps to calculate the correct answer:
+
+    Measure the width of the rectangle.
+    Measure the height of the rectangle.
+    Multiply the width and height of the rectangle.
+
+With practice, you can calculate the area of the rectangle without being instructed with these three steps every time.
+
+We can calculate the area of one rectangle with the following code:</p>
+<script>
+
+// Area of the rectangle
+const width = 10;
+const height = 6;
+const area =  width * height;
+console.log(area); //
+// Imagine being asked to calculate the area of three different rectangles:
+// Area of the first rectangle
+const width1 = 10;
+const height1 = 6;
+const area1 =  width1 * height1;
+
+// Area of the second rectangle
+const width2 = 4;
+const height2 = 9;
+const area2 =  width2 * height2;
+
+// Area of the third rectangle
+const width3 = 10;
+const height3 = 10;
+const area3 =  width3 * height3;
+
+// default parameters
+function greeting (name = 'stranger') {
+  console.log(`Hello, ${name}!`)
+}
+
+greeting('Nick') // Output: Hello, Nick!
+greeting() // Output: Hello, stranger!
+// Return keyword
+function rectangleArea(width, height) {
+  if (width < 0 || height < 0) {
+    return 'You need positive integers to calculate area!';
+  }
+  return width * height;
+}
+
+// Arrow Functions
+const rectangleArea = (width, height) => {
+  let area = width * height;
+  return area;
+};
+</script>
+  </body>
+</html>
