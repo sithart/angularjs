@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sleep Debt Calculator</title>
+  </head>
+  <body>
+<script>
+  function getSleepHours(day){
+  switch (day){
+    case 'monday':
+    return 8;
+    break;
+    case 'tuesday':
+    return 7;
+    break;
+    case 'wednesday':
+    return 7.30;
+    break;
+    case 'thursday':
+    return 8.30;
+    break;
+    case 'friday':
+    return 9;
+    break;
+    case 'saturday':
+    return 7.15;
+    break;
+    case 'sunday':
+    return 8.45;
+    break;
+  }
+};
+
+
+function getActualSleepHours(){
+  return getSleepHours('sunday')+ getSleepHours('monday')
+  + getSleepHours('tuesday') +
+  getSleepHours('wednesday') +
+  getSleepHours('thursday') +
+  getSleepHours('friday') +
+  getSleepHours('saturday') +
+  getSleepHours('sunday');
+}
+
+function getIdealSleepHours(){
+  let idealHours = 8;
+  return  idealHours * 7;
+}
+
+console.log(getActualSleepHours());
+console.log(getIdealSleepHours());
+
+function calculateSleepDebt(){
+  let actualSleepHours = getActualSleepHours();
+  let idealSleepHours = getIdealSleepHours();
+  if(actualSleepHours == idealSleepHours){
+    console.log('perfect amount of sleep');
+  }
+  else if(actualSleepHours > idealSleepHours){
+    console.log('user got more sleep than needed');
+  }
+  else if(actualSleepHours < idealSleepHours){
+    console.log('the user should get some rest');
+  }
+
+}
+calculateSleepDebt();
+</script>
+</body>
+</html>

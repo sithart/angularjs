@@ -21,5 +21,93 @@ Our code will break the game into four parts:
     Compare the two choices and determine a winner.
     Start the program and display the results.
 </p>
+<script>
+const getUserChoice = userInput => {
+userInput = userInput.toLowerCase();
+if(userInput == 'rock'){
+  return userInput
+}
+else if(userInput == 'paper'){
+  return userInput
+}
+else if(userInput == 'scissors'){
+  return userInput
+}
+else{
+  console.log("Invalid input");
+}
+}
+
+
+const getComputerChoice = () =>{
+let computer = Math.floor(Math.random() * 3);
+if(computer == 0){
+  userInput = 'rock';
+  return userInput
+}
+ else if(computer == 1){
+  userInput = 'paper';
+  return userInput
+}
+ else if(computer == 2){
+  userInput = 'scissors';
+  return userInput
+}
+}
+
+
+let userChoice = getUserChoice('scissors');
+let computerChoice = getComputerChoice();
+const determineWinner = (userChoice,computerChoice) =>{
+let result = 'game was a tie.';
+// console.log(`user choice is ${userChoice}`);
+// console.log(`computer choice is ${computerChoice}`);
+if(userChoice == computerChoice){
+  return result
+}
+else{
+    if(userChoice == 'rock'){
+        if(computerChoice == 'paper'){
+            result = 'Computer Won!';
+            return result
+        }
+        else{
+            result = 'User Won!';
+            return result
+        }
+     }
+    else if(userChoice == 'paper'){
+        if(computerChoice == 'scissors'){
+            result = 'Computer Won!';
+            return result
+        }
+        else{
+            result = 'User Won!';
+            return result
+        }
+     }
+     else if(userChoice == 'scissors'){
+        if(computerChoice == 'rock'){
+            result = 'Computer Won!';
+            return result
+        }
+        else{
+            result = 'User Won!';
+            return result
+        }
+     }
+  }
+
+
+
+
+}
+// console.log(determineWinner(userChoice,computerChoice));
+
+function playGame(){
+console.log(determineWinner(userChoice,computerChoice));
+}
+playGame();
+</script>
   </body>
 </html>
