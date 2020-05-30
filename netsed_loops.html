@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nested Loops</title>
+  </head>
+  <body>
+<script type="text/javascript">
+  // Write your code below
+const bobsFollowers = ['iron', 'jhon', 'alex', 'steve']
+
+const tinasFollowers = ['iron', 'jhon', 'miller']
+
+const mutualFollowers = []
+
+for(let i = 0; i < bobsFollowers.length; i++ ){
+  for(let j=0; j < tinasFollowers.length; j++){
+if(bobsFollowers[i] === tinasFollowers[j]){
+  mutualFollowers.push(bobsFollowers[i]);
+}
+  }
+};
+
+console.log(mutualFollowers);
+</script>
+  </body>
+</html>
