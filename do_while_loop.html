@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Do while Loop</title>
+  </head>
+  <body>
+<script type="text/javascript">
+  let countString = '';
+  let i = 0;
+
+  do {
+    countString = countString + i;
+    i++;
+  } while (i < 5);
+
+  console.log(countString);
+
+  const firstMessage = 'I will print!';
+const secondMessage = 'I will not print!';
+
+// A do while with a stopping condition that evaluates to false
+do {
+ console.log(firstMessage)
+} while (true === false);
+
+// A while loop with a stopping condition that evaluates to false
+while (true === false){
+  console.log(secondMessage)
+};
+
+// Cups of sugar added
+// Write your code below
+const cupsOfSugarNeeded = 10;
+let cupsAdded = 0;
+
+do{
+  cupsAdded = cupsAdded +1
+  console.log(cupsAdded);
+}while(cupsAdded < cupsOfSugarNeeded){
+  console.log(cupsAdded);
+}
+
+</script>
+  </body>
+</html>
